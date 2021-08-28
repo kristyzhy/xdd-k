@@ -103,7 +103,7 @@ var codeSignals = []CodeSignal{
 	},
 	{
 		Command: []string{"sign", "打卡", "签到"},
-		//Admin:   true,
+		Admin:   true,
 		Handle: func(sender *Sender) interface{} {
 			//if sender.Type == "tgg" {
 			//	sender.Type = "tg"
@@ -158,7 +158,7 @@ var codeSignals = []CodeSignal{
 	},
 	{
 		Command: []string{"coin", "许愿币", "余额", "yu", "yue"},
-		//Admin:   true,
+		Admin:   true,
 		Handle: func(sender *Sender) interface{} {
 			return fmt.Sprintf("余额%d", GetCoin(sender.UserID))
 		},
