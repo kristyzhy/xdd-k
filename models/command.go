@@ -6,7 +6,8 @@ import (
 	"regexp"
 	"strings"
 	"time"
-
+	"github.com/beego/beego/v2/client/httplib"
+	"github.com/beego/beego/v2/server/web"
 	"gorm.io/gorm"
 )
 
@@ -172,7 +173,7 @@ var codeSignals = []CodeSignal{
 			// 	return nil
 			// }
 			// return rsp
-			return "小滴滴和京东没有任何关系，请使用ninja。"
+			return "扫码暂时失效，需手动抓取Cookie"
 		},
 	},
 	{
