@@ -138,7 +138,8 @@ var handleMessage = func(msgs ...interface{}) interface{} {
 							}
 						}
 					} else {
-						sender.Reply(fmt.Sprintf("无效，许愿币-1，余额%d", RemCoin(sender.UserID, 1)))
+						//sender.Reply(fmt.Sprintf("无效，许愿币-1，余额%d", RemCoin(sender.UserID, 1)))
+						sender.Reply(fmt.Sprintf("无效cookie,请检查"))
 					}
 				}
 				go func() {
