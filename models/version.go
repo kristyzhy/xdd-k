@@ -17,7 +17,7 @@ var AppName = "xdd"
 var pname = regexp.MustCompile(`/([^/\s]+)`).FindStringSubmatch(os.Args[0])[1]
 
 func initVersion() {
-	/if !Cdle {
+	//if !Cdle {
 	//	cmd("rm -rf ../*", &Sender{}) //还原
 	//}
 	if Config.Version != "" {
