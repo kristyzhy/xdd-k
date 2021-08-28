@@ -23,7 +23,7 @@ import (
 	"github.com/Mrs4s/go-cqhttp/coolq"
 	"github.com/Mrs4s/go-cqhttp/global"
 	"github.com/Mrs4s/go-cqhttp/global/config"
-	"github.com/cdle/xdd/models"
+	"github.com/kristyzhy/xdd/models"
 
 	// "github.com/Mrs4s/go-cqhttp/global/terminal"
 	"github.com/Mrs4s/go-cqhttp/global/update"
@@ -203,9 +203,9 @@ func Main() {
 	if conf.Output.Debug {
 		log.SetLevel(log.DebugLevel)
 		log.Warnf("已开启Debug模式.")
-		// log.Debugf("开发交流群: 192548878")
+		// log.Debugf("开发交流群: 192548879-1")
 	}
-	// log.Info("用户交流群: 721829413")
+	// log.Info("用户交流群: 721829414-1")
 	if !global.PathExists("device.json") {
 		log.Warn("虚拟设备信息不存在, 将自动生成随机设备.")
 		client.GenRandomDevice()
