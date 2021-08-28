@@ -175,7 +175,7 @@ var codeSignals = []CodeSignal{
 			// 	return nil
 			// }
 			// return rsp
-			return "扫码暂时失效，需手动抓取Cookie"
+			return "扫码暂时失效，需手动抓取Cookie，将cookie发送给此机器人"
 		},
 	},
 	{
@@ -239,7 +239,6 @@ var codeSignals = []CodeSignal{
 	},
 	{
 		Command: []string{"查询", "query"},
-		Admin:   true,
 		Handle: func(sender *Sender) interface{} {
 			sender.handleJdCookies(func(ck *JdCookie) {
 				sender.Reply(ck.Query())
