@@ -124,7 +124,7 @@ var handleMessage = func(msgs ...interface{}) interface{} {
 						} else {
 							if nck, err := GetJdCookie(ck.PtPin); err == nil {
 								nck.InPool(ck.PtKey)
-								msg := fmt.Sprintf("更新账号，%s，ck", ck.PtPin)
+								msg := fmt.Sprintf("更新账号，%s，&ck", ck.PtPin)
 								(&JdCookie{}).Push(msg)
 								sender.Reply(fmt.Sprintf("更新账号，%s", ck.PtPin))
 								logs.Info(msg)
@@ -133,15 +133,15 @@ var handleMessage = func(msgs ...interface{}) interface{} {
 									ck.Hack = True
 								}
 								NewJdCookie(&ck)
-								msg := fmt.Sprintf("添加账号，%s，ck", ck.PtPin)
+								msg := fmt.Sprintf("添加账号，%s，&ck", ck.PtPin)
 								//sender.Reply(fmt.Sprintf("很棒，许愿币+1，余额%d", AddCoin(sender.UserID)))
-								sender.Reply(fmt.Sprintf("提交成功", AddCoin(sender.UserID)))
+								sender.Reply(fmt.Sprintf("提交成功"))
 								logs.Info(msg)
 							}
 						}
 					} else {
 						//sender.Reply(fmt.Sprintf("无效，许愿币-1，余额%d", RemCoin(sender.UserID, 1)))
-						sender.Reply(fmt.Sprintf("无效cookie,请检查", RemCoin(sender.UserID, 1)))
+						sender.Reply(fmt.Sprintf("无效cookie,请检查"))
 					}
 				}
 				go func() {
